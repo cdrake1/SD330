@@ -7,8 +7,59 @@
     
     <script>
     
-        function start(){
+        function start()
+        {
             htmlString = '<p> Start of Data';
             document.getElementById('display1').innerHTML = htmlString;
         }    
+
+        let x = "hello";
+        let y = "World";
+        let z1 = x + " " + y;
+        let z2 = x + 9;
+        let z3 = 3 + 9;
+
+        htmlString = '<p> 1a. Concat ' + z1;
+        htmlString += '<p> 1b. Concat ' + z2;
+        htmlString += '<p> 1b. Concat ' + z3;
+
+        const PI = 3.141592653589793;
+        htmlString += '<p> 2. Constant ' + PI;
+
+        buildings = ['Hancock', 'LT', 'Donelly', 'Byrne'];
+        htmlString += '<p> 3a. Array [] ' + buildings[1];
+        htmlString += '<p> 3b. Arrays .length' + buildings.length;
+
+        if (buildings.includes('Hancock'))
+        {
+            htmlString += '<p> 4a. Does include Hancock;'
+
+        }
+        else
+        {
+            htmlString += '<p> 4b. Does NOT include hancock';
+
+        }
+
+        let s1 = " This has outer strings with an inner '";
+        let s2 = ' This has outer string with an inner "';
+        htmlString += '<p> 5a. ' + s1;
+        htmlString += '<p> 5b. ' + s2;
+
+
+        //finish later
+        for(let i = 0; i < buildings.length; i++)
+        {
+            htmlString += '<optionvalue'
+            
+
+        }
+
+        htmlString += '<p> 7. objects: ';
+        const car = {type:"Lamborghini", model:"Urus", color:"green"};
+        htmlString += 'car.type=' + car.type;
+        htmlString += 'car.model=' + car.model;
+
+        document.getElementById('display1').innerHTML = htmlString;
+
     </script>
