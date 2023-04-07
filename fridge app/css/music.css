@@ -188,32 +188,27 @@
       
     .buttons-nav1 
     {
-        background-color: #00AC47;
+        background-color: #E03A3E;
     }
     
     .buttons-nav2 
     {
-        background-color: #737373;
+        background-color: #1ED760;
     }
     
     .buttons-nav3 
     {
-        background-color: #0091D6;
+        background-color:  #00A0EE;
     }
     
     .buttons-nav4 
     {
-        background-color: #FF9500;
+        background-color: #F26F23;
     }
     
     .buttons-nav5 
     {
-        background-color: #410093;
-    }
-
-    .buttons-nav6 
-    {
-        background-color: #E37151;
+        background-color: #00A8E1;
     }
     
     .buttons button:hover 
