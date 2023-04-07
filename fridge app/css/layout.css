@@ -17,6 +17,13 @@
         box-sizing: border-box;
     }
 
+    .hello
+    {
+        align-items: left;
+        font-weight: 800px;
+
+    }
+
 
     /* following is for navigation and header section */
     nav
