@@ -4,31 +4,81 @@
         <meta charset="UTF-8">
     
         <title>Document</title>
-        <style>
-            body
-            {
-                background-color: fff;
-                color: black;
-               
-            }
-            #Refrigerator
-            {
+        <link rel="stylesheet" href="css\layout.css">
         
-                border: solid black;
-                border-width: 5px;
-                padding: 2px 2px 2px 2px;
-                margin: 10px 10px 10px 10px;
-                float: center;    width: 80%;
-
-
-            }
-
-        </style>
     </head>
     <body onload = "doStartClock()">
-        <h1> Refrigerator </h1>
-        <div id="Refrigerator">
 
+        <div id="phone">
+            <!-- this class is for header and drop down -->
+            <div class="hero">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                    <img src="images/download.png" class="user-pic" onclick="toggleMenu()">
+
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+
+                                <img src="images/download.png">
+                                <h2> Hello! "User" </h2>
+                            </div>
+
+                            <hr>
+
+                            <a href="pages/settings.html" class="sub-menu-link">
+                                <img src="images/download.png">
+                                <p> Settings </p>
+                                <span> > </span>
+                            </a>
+
+                            <a href="pages/Accounts.html" class="sub-menu-link">
+                                <img src="images/download.png">
+                                <p> Accounts </p>
+                                <span> > </span>
+                            </a>
+
+                            <a href="pages/Help.html" class="sub-menu-link">
+                                <img src="images/download.png">
+                                <p> Help? </p>
+                                <span> > </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <hr>
+
+            <div class="buttons">
+                <a href="pages/temp.html" class="buttons-link1">
+                  <button class="buttons-nav1"> Temperature </button>
+                </a>
+              
+                <a href="pages/weather.html" class="buttons-link2">
+                  <button class="buttons-nav2"> Weather </button>
+                </a>
+              
+                <a href="pages/stream.html" class="buttons-link3">
+                  <button class="buttons-nav3"> Streaming </button>
+                </a>
+              
+                <a href="pages/internet.html" class="buttons-link4">
+                  <button class="buttons-nav4"> Internet </button>
+                </a>
+              
+                <a href="pages/music.html" class="buttons-link5">
+                  <button class="buttons-nav5"> Music </button>
+                </a>
+            </div>
+              
+              
         
             <div id="on/off" >
                 <input type=button onclick="onOrOff()" id="buttonOnOff" value="On" style="background-color: green;"> </button>           
@@ -40,7 +90,7 @@
                 
             </div>
 
-            <div id="timePar" style="font-size: smaller;font-family: 'Courier New', Courier, monospace; text-align: left; color: black; border: solid black; float: left; width: 12%;  ">00:00:00</div>
+            <div id="timePar" style="font-size: smaller;font-family: 'Courier New', Courier, monospace; text-align: left; color: black; border: solid black; float: left; width: 22%;  ">00:00:00</div>
         <br>
             <div id="open/close" >    
                 <input type=button onclick="openOrClose()" id="buttonOpen" value="Open"> </button>
@@ -61,6 +111,13 @@
         </div>
 
         <script>
+            let subMenu = document.getElementById("subMenu");
+            function toggleMenu()
+            {
+                subMenu.classList.toggle("open-menu");
+
+            }
+
             function doStartClock()
             {
                 setInterval(doClockTick,1000);
@@ -169,8 +226,6 @@
         </script>
 
         <footer>
-            <hr>
-            <small> &copy; C. Drake, February 27, 2023  </small>
         </footer>
         
     </body>
