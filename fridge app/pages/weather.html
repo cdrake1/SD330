@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/weather.css">
+        <title> Weather </title>
+    </head>
+    <body>
+        <div id="phone">
+
+            <div class="hero">
+                <nav>
+                    <ul>
+                        <li><a href="../fridge.html">
+                            <img src="../images/backarrow.png">
+
+                        </a></li>
+                    </ul>
+                    <img src="../images/download.png" class="user-pic" onclick="toggleMenu()">
+
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+
+                                <img src="../images/download.png">
+                                <h2> Hello! "User" </h2>
+                            </div>
+
+                            <hr>
+
+                            <a href="settings.html" class="sub-menu-link">
+                                <img src="../images/settings.png">
+                                <p> Settings </p>
+                                <span> > </span>
+                            </a>
+
+                            <a href="Accounts.html" class="sub-menu-link">
+                                <img src="../images/download.png">
+                                <p> Accounts </p>
+                                <span> > </span>
+                            </a>
+
+                            <a href="Help.html" class="sub-menu-link">
+                                <img src="../images/help.png">
+                                <p> Help? </p>
+                                <span> > </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <br>
+              
+
+
+        </div>
+
+
+        <script>
+            let subMenu = document.getElementById("subMenu");
+            function toggleMenu()
+            {
+                subMenu.classList.toggle("open-menu");
+
+            }
+
+
+
+        </script>
+        
+        
+    </body>
 </html>

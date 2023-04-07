@@ -47,7 +47,6 @@
         display: inline-block;
         list-style: none;
         margin: 1px 5px;
-        
     }
 
     nav ul li a
@@ -57,7 +56,13 @@
 
 
     }
+    nav ul li img
+    {
+        width: 20%;
+        align-items: left;
 
+
+    }
 
     .sub-menu-wrap
     {
@@ -183,27 +188,37 @@
       
     .buttons-nav1 
     {
-        background-color: rgb(9, 93, 166);
+        background-color: #e50914;
     }
     
     .buttons-nav2 
     {
-        background-color: skyblue;
+        background-color: #1ce783;
     }
     
     .buttons-nav3 
     {
-        background-color: orangered;
+        background-color: #009DDC;
     }
     
     .buttons-nav4 
     {
-        background-color: forestgreen;
+        background-color: #963D97;
     }
     
     .buttons-nav5 
     {
-        background-color: palevioletred;
+        background-color: seashell;
+    }
+
+    .buttons-nav6 
+    {
+        background-color: #FF0000;
+    }
+
+    .buttons-nav7
+    {
+        background-color: #F47521;
     }
     
     .buttons button:hover 
