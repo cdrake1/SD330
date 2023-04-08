@@ -144,6 +144,12 @@
         min-height: calc(100vh - 80px); /* set the min-height to the viewport height minus the height of the nav element */
         object-fit: cover;
         padding-top: 80px; /* set the padding-top to the height of the nav element */
-      }
+    }
+
+    .logo, .fab, .fa-linkedin, .fa-instagram, .fa-github 
+    {
+        color: #87AFE1ff;
+        
+    }
       
       
