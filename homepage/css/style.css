@@ -15,7 +15,7 @@
 
     nav
     {
-        background: white;
+        background: #F0F5F7ff;
         height: 80px;
         width: 100%;
 
@@ -23,7 +23,7 @@
 
     label.logo
     {
-        color:  #57886c;
+        color:  #87AFE1ff;
         font-size: 35px;
         line-height: 80px;
         padding: 0 100px;
@@ -47,7 +47,7 @@
 
     nav ul li a
     {
-        color: #57886c;
+        color: #87AFE1ff;
         font-size: 17px;
         padding: 7px 13px;
         border-radius: 3px;
@@ -56,7 +56,7 @@
 
     a.active,a:hover
     {
-        background: whitesmoke;
+        background: rgb(209, 226, 247);
         transition: 0.5s;
 
     }
