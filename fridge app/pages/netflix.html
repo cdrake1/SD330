@@ -56,6 +56,9 @@
 
             <div class="tv">
                 <img src="../images/netflix.png">
+                <audio id="myAudio">
+                    <source src="../mp3s/netflixintro.mp3" type="audio/mpeg">
+                </audio>
             </div>
             <hr>
             
@@ -70,6 +73,12 @@
                 subMenu.classList.toggle("open-menu");
 
             }
+
+            window.onload = function() 
+            {
+                const audio = document.getElementById('myAudio');
+                audio.play();
+            };
         </script>
         
     </body>
