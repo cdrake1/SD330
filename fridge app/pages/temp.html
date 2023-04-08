@@ -55,6 +55,8 @@
 
             <div class="temp">
 
+                <h1> Temperature </h1>
+
                 <div class="temp-controls">
 
                     <button class="temp-btn temp-minus">-</button>
@@ -64,6 +66,12 @@
                     <button class="temp-btn temp-plus">+</button>
 
                 </div>
+            </div>
+            
+            <br>
+
+            <div class="temp-scale">
+                <button class="temp-btn temp-plus"> Change Scale </button>
             </div>
               
 
@@ -78,6 +86,28 @@
                 subMenu.classList.toggle("open-menu");
 
             }
+
+           
+            const down = document.querySelector('.temp-minus');
+            const up = document.querySelector('.temp-plus');
+            const temp = document.querySelector('.temp-number');
+
+            // Set the initial temperature value to 42
+            let temperature = 42;
+
+            // Add event listeners to the minus and plus buttons
+            down.addEventListener('click', () => {
+                temperature--;
+                temp.textContent = temperature;
+            });
+
+            up.addEventListener('click', () => {
+                temperature++;
+                temp.textContent = temperature;
+            });
+
+
+            
 
 
 
