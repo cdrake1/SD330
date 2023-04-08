@@ -56,21 +56,18 @@
 
             <hr>
 
-            <div class="account-settings">
-                <h2> Account Settings </h2>
-                <hr>
-                <ul class="account-list">
-                    <li><button> Account Information </button></li>
-                    <br>
-                    <li><button> Link Accounts </button></li>
-                    <br>
-                    <li><button> Languages </button></li>
-                    <br>
-                    <li><button> App Appearance </button></li>
-                    <li style="margin-left: -10px;"><a href="shoppinglist.html"><button>Shopping List</button></a></li>
-
+            <form>
+                <label for="item">Item:</label>
+                <input type="text" id="item" name="item">
+                <button type="button" onclick="addItem()">Add Item</button>
+                <ul id="shoppingList">
+                    <li> Milk </li>
+                    <li> Eggs </li>
+                    <li> Cereal </li>
+                    <li> Orange Juice </li>
+                    <li> Steak </li>
                 </ul>
-            </div>
+            </form>
               
             
         </div>
@@ -81,6 +78,15 @@
             {
                 subMenu.classList.toggle("open-menu");
 
+            }
+
+            function addItem() 
+            {
+                var item = document.getElementById("item").value;
+                var node = document.createElement("LI");
+                var textnode = document.createTextNode(item);
+                node.appendChild(textnode);
+                document.getElementById("shoppingList").appendChild(node);
             }
 
         </script>
