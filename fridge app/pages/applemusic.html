@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> Music </title>
-        <link rel="stylesheet" href="../css/music.css">
+        <title> Streaming </title>
+        <link rel="stylesheet" href="../css/watchTv.css">
     </head>
     <body>
 
@@ -11,7 +11,7 @@
             <div class="hero">
                 <nav>
                     <ul>
-                        <li><a href="../fridge.html">
+                        <li><a href="stream.html">
                             <img src="../images/backarrow.png">
 
                         </a></li>
@@ -53,32 +53,18 @@
 
             <hr>
             <br>
-            
-            <div class="buttons">
-                <a href="applemusic.html" class="buttons-link1">
-                <button class="buttons-nav1"> Apple Music </button>
-                </a>
-            
-                <a href="#" class="buttons-link2">
-                <button class="buttons-nav2"> Spotify </button>
-                </a>
-            
-                <a href="#" class="buttons-link3">
-                <button class="buttons-nav3"> Pandora </button>
-                </a>
-            
-                <a href="#" class="buttons-link4">
-                <button class="buttons-nav4"> SoundCloud </button>
-                </a>
-            
-                <a href="#" class="buttons-link5">
-                <button class="buttons-nav5"> Amazon Music </button>
-                </a>
 
+            <div class="tv">
+                <img src="../images/songplay.webp">
+                <audio id="myAudio">
+                    <source src="../mp3s/song.mp3" type="audio/mpeg">
+                </audio>
             </div>
+            <hr>
+            
+            
 
         </div>
-
 
         <script>
             let subMenu = document.getElementById("subMenu");
@@ -88,6 +74,11 @@
 
             }
 
+            window.onload = function() 
+            {
+                const audio = document.getElementById('myAudio');
+                audio.play();
+            };
         </script>
         
     </body>
