@@ -61,7 +61,7 @@
 
                     <button class="temp-btn temp-minus">-</button>
 
-                    <h1 class="temp-number">42</h1>
+                    <h1 class="temp-number">42.00</h1>
 
                     <button class="temp-btn temp-plus">+</button>
 
@@ -71,7 +71,7 @@
             <br>
 
             <div class="temp-scale">
-                <button class="temp-btn temp-plus"> Change Scale </button>
+                <button class="temp-btn" onclick="changeScale()">Change Scale</button>
             </div>
               
 
@@ -88,22 +88,65 @@
             }
 
            
+            let temperature = 42.00; 
+            let isFahrenheit = true; 
+
+            function changeScale() 
+            {
+                const tempEl = document.querySelector('.temp-number');
+                const currentTemp = parseFloat(tempEl.textContent);
+                
+                if (isFahrenheit) 
+                {
+                    const tempInCelsius = (currentTemp - 32) * 5/9;
+                    temperature = tempInCelsius;
+                    tempEl.textContent = temperature.toFixed(2);
+                    isFahrenheit = false;
+                    event.target.textContent = "Change to Fahrenheit";
+                } 
+                else 
+                {
+                    const tempInFahrenheit = (currentTemp * 9/5) + 32;
+                    temperature = tempInFahrenheit;
+                    tempEl.textContent = temperature.toFixed(2);
+                    isFahrenheit = true;
+                    event.target.textContent = "Change to Celsius";
+                }
+            }
+
             const down = document.querySelector('.temp-minus');
             const up = document.querySelector('.temp-plus');
             const temp = document.querySelector('.temp-number');
 
-            // Set the initial temperature value to 42
-            let temperature = 42;
-
-            // Add event listeners to the minus and plus buttons
             down.addEventListener('click', () => {
-                temperature--;
-                temp.textContent = temperature;
+                if (isFahrenheit) 
+                {
+                    
+                    temperature -= 1;
+                    temp.textContent = temperature.toFixed(2);
+                } 
+                else 
+                {
+
+                    if (temperature > -273.15) 
+                    {
+                        temperature -= 1;
+                        temp.textContent = temperature.toFixed(2);
+                    }
+                }
             });
 
             up.addEventListener('click', () => {
-                temperature++;
-                temp.textContent = temperature;
+                if (isFahrenheit) 
+                {
+                    temperature += 1;
+                    temp.textContent = temperature.toFixed(2);
+                } 
+                else 
+                {
+                    temperature += 1;
+                    temp.textContent = temperature.toFixed(2);
+                }
             });
 
 
