@@ -55,38 +55,33 @@
             </div>
 
             <hr>
+            <h2> Settings </h2>
+            <hr>
 
-              
-              
-        
-            <div id="on/off" >
-                <input type=button onclick="onOrOff()" id="buttonOnOff" value="On" style="background-color: green;"> </button>           
-
-            </div>
-
-            <div id="temperature"> 
-                <button class="temp"> Temperature: 33 . 0 F </button>
-                
-            </div>
-
-            <div id="timePar" style="font-size: smaller;font-family: 'Courier New', Courier, monospace; text-align: left; color: black; border: solid black; float: left; width: 22%;  ">00:00:00</div>
-        <br>
-            <div id="open/close" >    
-                <input type=button onclick="openOrClose()" id="buttonOpen" value="Open"> </button>
-
-                <img id="image1" src="https://as2.ftcdn.net/v2/jpg/01/99/70/43/1000_F_199704319_ATYlKaKCWUgoZVIHIQQXkKYsJIR4oHbp.jpg" style="display:none; width: 500px; height: auto;"/>
-               
+            <div class="set-buttons">
+                <div class="button-wrapper">
+                    <h3> Power </h3>
+                    <div id="onoff" >
+                        <input type=button onclick="onOrOff()" id="buttonOnOff" value="On" style="background-color: green;">
+                    </div>
+                </div>
+            
+                <div class="button-wrapper">
+                    <h3> Time </h3>
+                    <div id="timePar" style="font-size: smaller;font-family: 'Courier New', Courier, monospace; text-align: right; color: black; border: solid black; width: 54%;  ">00:00:00</div>
+                </div>
+            
+                <div class="button-wrapper">
+                    <h3> Inside Your Fridge </h3>
+                    <div id="openclose" >    
+                        <input type=button onclick="openOrClose()" id="buttonOpen" value="Open"> </button>
+                        <img id="image1" src="https://as2.ftcdn.net/v2/jpg/01/99/70/43/1000_F_199704319_ATYlKaKCWUgoZVIHIQQXkKYsJIR4oHbp.jpg" style="display:none; width: 500px; height: auto;"/>
+                    </div>
+                </div>
             </div>
             
-            <div id="internet" >  
-                <input type=button onclick="webSearch()" id="buttonWeb" value="Search Web"> </button>      
-                <img id="image2" src="https://www.lifewire.com/thmb/LAo6oIpfpHZd-yCQjJOTbwaVwe8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Google-Videos-57240f2c3df78ced1fe05a21.png" style="display: none; width: 500px; height: auto;"/>
-            </div>
-
-            <div id="tv" >  
-                <input type=button onclick="watchTv()" id="buttonTv" value="Watch Tv"> </button>
-                <img id="image3" src="https://d3dh6of9cnaq4t.cloudfront.net/Pictures/480xAny/9/5/6/10956_netflixhomepage_840558.jpg" style="display: none; width: auto; height: auto;"/>
-            </div>
+            
+            
         </div>
 
         <script>
@@ -144,6 +139,7 @@
                 {
                     openClose.value = "Close";
                     image.style.display = "block";
+                    image.style.width = "175px";
                     
                 }
                 else
@@ -155,52 +151,6 @@
     
                 
             }
-
-            function webSearch()
-            {
-                const image = document.getElementById("image2");
-                web = document.getElementById("buttonWeb");
-                if (web.value == "Search Web")
-                {
-                    web.value = "Close Web";
-                    image.style.display = "block";
-                    
-                }
-                else
-                {
-                    web.value = "Search Web";
-                    image.style.display = "none";
-                }
-
-
-            }
-
-            function watchTv()
-            {
-                const image = document.getElementById("image3");
-                watch = document.getElementById("buttonTv");
-                if (watch.value == "Watch Tv")
-                {
-                    watch.value = "Turn Off Tv";
-                    image.style.display = "block";
-                    
-                }
-                else
-                {
-                    watch.value = "Watch Tv";
-                    image.style.display = "none";
-                }
-
-
-            }
-            function temperature()
-            {
-                temp = document.getElementById("buttonTemp");
-                
-            }
-         
-           
-
 
         </script>
 
