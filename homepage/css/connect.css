@@ -1,3 +1,4 @@
+    /* body and everything */
     *
     {
     padding: 0;
@@ -9,9 +10,11 @@
 
     body
     {
-    background-color: #b7c9e2;
-    font-family: 'Kanit', sans-serif;
+        background-color: #8CB9DAff;
+        font-family: 'Kanit', sans-serif;
     }
+
+    /* nav and header */
 
     nav
     {
@@ -136,17 +139,34 @@
     }
     }
 
-    section 
-    {
-    background-color: #8CB9DAff;
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-    object-fit: cover;
-    }
-
     .logo, .fab, .fa-linkedin, .fa-instagram, .fa-github 
     {
         color: #87AFE1ff;
         
+    }
+
+    /* form css */
+
+    .Welcome
+    {
+        color: #F0F5F7ff;
+        text-align: left;
+        margin-left: 50px;
+        
+
+    }
+
+    .container
+    {
+        align-items: left;
+        margin-left: 70px;
+
+    }
+
+    .container #other
+    {
+
+        width: 300px;
+        height: 100px;
+
     }
