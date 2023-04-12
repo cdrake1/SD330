@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-    </head>
-    <body>
-        <p id="info">
-        
-            <script type="module">
-                let htmlString = "<h2> An introduction to JSON </h2>";
+<head>
+</head>
+<body>
+    <p id="info"></p>
+    <script type="module">
+        let htmlString = "<h2> An introduction to JSON </h2>";
 
+        const course = 
+        {
+            330: {
+                title:"System Design",
+                credits: "4"
+            },
+            306: {
+                title:"Data Communications",
+                credits: "4"
+            } 
+        }
+        htmlString += 'The value of   <b> course.number   </b> is ' + course[330].title;
 
-                const course = 
-                {
-                    330: {
-                        title:"System Design",
-                        credits: "4"
-                        
-                    },
-                    306: {
-                        title:"Data Communications",
-                        credits: "4"
-                        
-                    } 
-                }
-                htmlString += 'The value of   <b> course.number   </b> is ' + course[330].title;
+        async function fetchData() {
+            const response = await fetch("https://aptokash.github.io/SD330/10a-SampleObjects.json");
+            const data = await response.json();
 
-                const response = 
-                    await fetch ("https://aptokash.github.io/SD330/10a-SampleObjects.json");
-                const data = await response.json();
+            htmlString += "<p> The adult access: " +
+                data['usersTypes']['adult']['access'] + "</p>";
 
-                htmlString += "<P> The adult access:    " +
-                    data['usersTypes']['adult']['access']   ;
+            document.getElementById('info').innerHTML += htmlString;
+        }
 
-                document.getElementById('info').innerHTML += htmlString;
-            </script>
-        </p>
-
-        
-    </body>
+        fetchData();
+    </script>
+</body>
 </html>
