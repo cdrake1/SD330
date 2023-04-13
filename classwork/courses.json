@@ -1,0 +1,79 @@
+{
+    "classes":
+    {
+        "CMPT330":
+        {
+            "courses": 
+            {
+                "courseID":{},
+
+                "title":{},
+                
+                "professor":{},
+
+                "semester":{}
+
+            }
+
+        },
+
+        "CMPT331":
+        {
+            "courses": 
+            {
+                "courseID":{},
+
+                "title":{},
+                
+                "professor":{},
+
+                "semester":{}
+
+            }
+
+        },
+
+        "CMPT307":
+        {
+            "courses": 
+            {
+                "courseID":{},
+
+                "title":{},
+                
+                "professor":{},
+
+                "semester":{}
+
+            }
+
+        },
+
+        "CMPT412":
+        {
+            "courses": 
+            {
+                "courseID":{},
+
+                "title":{},
+                
+                "professor":{},
+
+                "semester":{}
+
+            }
+
+        }
+
+    },
+
+    "books":
+    {
+        "ISBN":{},
+        "title":{},
+        "author":{},
+        "courseID":{}
+
+    }
+        
+}
