@@ -97,4 +97,14 @@ a.active,a:hover
     padding: 0 1px;
 }
   
-  
+section.introSection {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+ }
+ 
+ section.image 
+ {
+    background-image: url(download.jpeg);
+    background-size: cover;
+ }
