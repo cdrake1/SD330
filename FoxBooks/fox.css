@@ -3,7 +3,7 @@ margin: 0;
 }
 
 .nav {
-background-color: grey;
+background-color: whitesmoke;
 color: #000;
 display: flex;
 justify-content: space-between;
@@ -79,7 +79,7 @@ padding: 0 3px;
 }
 
 footer {
-background-color: grey;
+background-color: whitesmoke;
 color: #000;
 padding: 5px;
 display: flex;
@@ -114,6 +114,11 @@ background-color: white;
     text-align: center;
 }
 
+.best-sell img
+{
+    width: 90%;
+}
+
 .more-books
 {
     text-align: center;
@@ -122,7 +127,7 @@ background-color: white;
 
 .more-books img
 {
-    width: 60%;
+    width: 80%;
 }
 
 
