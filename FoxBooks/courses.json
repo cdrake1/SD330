@@ -74,6 +74,30 @@
         "author":{},
         "courseID":{}
 
-    }
+    },
+    "books":
+    {
+        "ISBN":{},
+        "title":{},
+        "author":{},
+        "courseID":{}
+
+    },
+    "books":
+    {
+        "ISBN":{},
+        "title":{},
+        "author":{},
+        "courseID":{}
+
+    },
+    "books":
+    {
+        "ISBN":{},
+        "title":{},
+        "author":{},
+        "courseID":{}
+
+    },
         
 }
