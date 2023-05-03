@@ -31,24 +31,35 @@
             <h1> Course Textbook Information: </h1>
 
             <ul id="bookList">
-                <li></li>
+
             </ul>
 
         </div>
         <script>
-            let htmlString = "<h2> Textbooks: </h2>";
-            
-            async function fetchData() {
+            let htmlString = "";
+            async function fetchData() 
+            {
                 const response = await fetch("https://cdrake1.github.io/SD330/FoxBooks/courses.json");
                 const data = await response.json();
 
-                let book = data['books']['title'];
-                
-                htmlString += "<h2> " + book["title"] + ", " + book["author"] + ", " + book["courseID"] + "</h2>";
+                const urlParams = new URLSearchParams(window.location.search);
+                const courseID = urlParams.get("courseID");
+
+                const course = data["courses"][courseID];
+                const book = data["books"][course["bookID"]];
+
+                htmlString += "<h2> Textbooks: </h2>";
+                htmlString += "<li>";
+                htmlString += "<p>Title: " + book["title"] + "</p>";
+                htmlString += "<p>Author: " + book["author"] + "</p>";
+                htmlString += "<p>ISBN: " + book["ISBN"] + "</p>";
+                htmlString += "</li>";
+
                 document.getElementById("bookList").innerHTML = htmlString;
             }
-
             fetchData();
+
+
         </script>
 
         <footer>

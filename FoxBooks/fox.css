@@ -1,5 +1,6 @@
 body {
 margin: 0;
+
 }
 
 .nav {
@@ -128,11 +129,20 @@ background-color: white;
 .more-books img
 {
     width: 80%;
+    background-color: white;
 }
 
 
-.classList h1
+.classList
 {
     align-items: center;
+    background-color: white;
 }
+
+.booksList
+{
+    align-items: center;
+    background-color: white;
+}
+
 
