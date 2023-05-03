@@ -1,67 +1,43 @@
 {
-    "classes":
+    "courses":
     {
         "CMPT330":
         {
-            "courses": 
-            {
-                "courseID":{"330"},
-
-                "title":{"System Design"},
-                
-                "professor":{"Andrew Tokash"},
-
-                "semester":{"Spring 2023"}
-                
-            }
-
+        
+            "courseID": "330",
+            "title": "System Design",     
+            "professor": "Andrew Tokash",
+            "semester": "Spring 2023"
+            
         },
 
         "CMPT331":
         {
-            "courses": 
-            {
-                "courseID":{"331"},
-
-                "title":{"Theory of Programming Languages"},
-                
-                "professor":{"Alan Labouseur"},
-
-                "semester":{"Spring 2023"}
-
-            }
+           
+            "courseID": "331",
+            "title": "Theory of Programming Languages",
+            "professor": "Alan Labouseur",
+            "semester": "Spring 2023"
 
         },
 
         "CMPT307":
         {
-            "courses": 
-            {
-                "courseID":{"307"},
-
-                "title":{"Internetworking"},
-                
-                "professor":{"Andrew Tokash"},
-
-                "semester":{"Spring 2023"}
-
-            }
+        
+            "courseID": "307",
+            "title": "Internetworking",
+            "professor": "Andrew Tokash",
+            "semester": "Spring 2023"
 
         },
 
         "CMPT412":
         {
-            "courses": 
-            {
-                "courseID":{"412"},
-
-                "title":{"Robotics"},
-                
-                "professor":{"Brian Gormenly"},
-
-                "semester":{"Spring 2023"}
-
-            }
+            
+            "courseID": "412",
+            "title": "Robotics",
+            "professor": "Brian Gormenly" ,
+            "semester": "Spring 2023"
 
         }
 
@@ -69,35 +45,46 @@
 
     "books":
     {
-        "ISBN":{},
-        "title":{},
-        "author":{},
-        "courseID":{}
 
-    },
-    "books":
-    {
-        "ISBN":{},
-        "title":{},
-        "author":{},
-        "courseID":{}
+        "CMPT330":
+        {
+            
+            "ISBN": "1119547253",
+            "title": "interaction Design",
+            "author": "Helen Sharp",
+            "courseID": "CMPT 330"
 
-    },
-    "books":
-    {
-        "ISBN":{},
-        "title":{},
-        "author":{},
-        "courseID":{}
+        },
 
-    },
-    "books":
-    {
-        "ISBN":{},
-        "title":{},
-        "author":{},
-        "courseID":{}
+        "CMPT331":
+        {
+            
+            "ISBN": "9353438896",
+            "title": "Concepts of Programming Languages",
+            "author": "Robert W. Sebesta",
+            "courseID": "CMPT331"
 
-    },
-        
+        },
+
+        "CMPT307":
+        {
+            
+            "ISBN": "0135792738",
+            "title": "Officil Cert Guide",
+            "author": "Odom Wendell",
+            "courseID": "CMPT307"
+
+        },
+
+        "CMPT412":
+        {
+            
+            "ISBN": "026263354X",
+            "title": "The Robotics Primer",
+            "author": "Mataric, Maja J",
+            "courseID": "CMPT412"
+
+        }
+
+    }
 }
