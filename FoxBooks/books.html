@@ -22,36 +22,30 @@
         <nav class="crumbs">
             <ol>
                 <li class="crumb"><a href="index.html"> Home </a></li>
-                <li class="crumb"> Course List </li>
+                <li class="crumb"><a href="CList.html"> Course List </a></li>
+                <li class="crumb"> Course Textbooks </li>
             </ol>
         </nav>
 
         <div class="classList">
-            <h1> Your Classes this semester: </h1>
+            <h1> Course Textbook Information: </h1>
 
-            <ul id="courseList">
+            <ul id="bookList">
                 <li></li>
             </ul>
 
         </div>
         <script>
-            let htmlString = "<h2> Your classes! <h2>";
+            let htmlString = "<h2> Textbooks: </h2>";
             
             async function fetchData() {
                 const response = await fetch("https://cdrake1.github.io/SD330/FoxBooks/courses.json");
                 const data = await response.json();
 
-                let CourseOne = data['courses']['CMPT330'];
-                let CourseTwo = data['courses']['CMPT331'];
-                let CourseThree = data['courses']['CMPT307'];
-                let CourseFour = data['courses']['CMPT412'];
-
-                htmlString += "<h3><a href='books.html?courseID=" + CourseOne["courseID"] + "'>" + CourseOne["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseTwo["courseID"] + "'>" + CourseTwo["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseThree["courseID"] + "'>" + CourseThree["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseFour["courseID"] + "'>" + CourseFour["title"] + "</a></h3>";
-
-                document.getElementById("courseList").innerHTML = htmlString;
+                let book = data['books']['title'];
+                
+                htmlString += "<h2> " + book["title"] + ", " + book["author"] + ", " + book["courseID"] + "</h2>";
+                document.getElementById("bookList").innerHTML = htmlString;
             }
 
             fetchData();
