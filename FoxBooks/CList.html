@@ -29,16 +29,38 @@
         <div class="classList">
             <h1> Your Classes this semester: </h1>
 
-            <ul>
+            <ul id="courseList">
                 <li></li>
             </ul>
 
         </div>
+        <script>
+            let htmlString = "<h2> Your classes! <h2>";
+            
+            async function fetchData() {
+                const response = await fetch("https://cdrake1.github.io/SD330/FoxBooks/courses.json");
+                const data = await response.json();
+
+                let CourseOne = data['courses']['CMPT330'];
+                let CourseTwo = data['courses']['CMPT331'];
+                let CourseThree = data['courses']['CMPT307'];
+                let CourseFour = data['courses']['CMPT412'];
+
+                htmlString += "<h3><a href='fb-bookpage.html?courseID=" + CourseOne["courseID"] + "'> Course 1: " + CourseOne["courseID"] + ", " + CourseOne["title"] + ", "+ CourseOne["semester"] + ", " + CourseOne["professor"] + "</a></h3>";
+                htmlString += "<h3><a href='fb-bookpage.html?courseID=" + CourseTwo["courseID"] + "'> Course 2: " + CourseTwo["courseID"] + ", " + CourseTwo["title"] + ", "+ CourseTwo["semester"] + ", " + CourseTwo["professor"] + "</a></h3>";
+                htmlString += "<h3><a href='fb-bookpage.html?courseID=" + CourseThree["courseID"] + "'> Course 3: " + CourseThree["courseID"] + ", " + CourseThree["title"] + ", "+ CourseThree["semester"] + ", " + CourseThree["professor"] + "</a></h3>";
+                htmlString += "<h3><a href='fb-bookpage.html?courseID=" + CourseFour["courseID"] + "'> Course 4: " + CourseFour["courseID"] + ", " + CourseFour["title"] + ", "+ CourseFour["semester"] + ", " + CourseFour["professor"] + "</a></h3>";
+
+                document.getElementById("courseList").innerHTML = htmlString;
+            }
+
+            fetchData();
+        </script>
 
         <footer>
             <div class="contact">
               <h3>Contact Me:</h3>
-              <p>Email: FoxBooks@example.com</p>
+              <p>Email: FoxBooks@gmail.com</p>
               <p>Phone: 123-456-7890</p>
             </div>
             <div class="copyright">
