@@ -1,11 +1,11 @@
 body {
 margin: 0;
 background-image: url(Marist.png);
-background-size: 20%;
+background-size: 30%;
 }
 
 .nav {
-background-color: #fff;
+background-color: #C8102E;
 color: #000;
 display: flex;
 justify-content: space-between;
@@ -64,6 +64,7 @@ margin-right: 20px;
 .crumbs ol {
 list-style-type: none;
 padding-left: 0;
+background-color: white;
 }
 
 .crumb {
@@ -113,6 +114,17 @@ background-color: white;
 .best-sell{
     background-color: white;
     text-align: center;
+}
+
+.more-books
+{
+    text-align: center;
+    background-color: white;
+}
+
+.more-books img
+{
+    width: 60%;
 }
 
 
