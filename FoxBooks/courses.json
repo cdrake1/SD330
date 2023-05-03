@@ -5,14 +5,14 @@
         {
             "courses": 
             {
-                "courseID":{},
+                "courseID":{"330"},
 
-                "title":{},
+                "title":{"System Design"},
                 
-                "professor":{},
+                "professor":{"Andrew Tokash"},
 
-                "semester":{}
-
+                "semester":{"Spring 2023"}
+                
             }
 
         },
@@ -21,13 +21,13 @@
         {
             "courses": 
             {
-                "courseID":{},
+                "courseID":{"331"},
 
-                "title":{},
+                "title":{"Theory of Programming Languages"},
                 
-                "professor":{},
+                "professor":{"Alan Labouseur"},
 
-                "semester":{}
+                "semester":{"Spring 2023"}
 
             }
 
@@ -37,13 +37,13 @@
         {
             "courses": 
             {
-                "courseID":{},
+                "courseID":{"307"},
 
-                "title":{},
+                "title":{"Internetworking"},
                 
-                "professor":{},
+                "professor":{"Andrew Tokash"},
 
-                "semester":{}
+                "semester":{"Spring 2023"}
 
             }
 
@@ -53,13 +53,13 @@
         {
             "courses": 
             {
-                "courseID":{},
+                "courseID":{"412"},
 
-                "title":{},
+                "title":{"Robotics"},
                 
-                "professor":{},
+                "professor":{"Brian Gormenly"},
 
-                "semester":{}
+                "semester":{"Spring 2023"}
 
             }
 
