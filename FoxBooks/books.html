@@ -29,34 +29,35 @@
 
         <div class="classList">
             <h1> Course Textbook Information: </h1>
-        
-            <ul id="bookList">
-        
-            </ul>
-        
+
         </div>
+        <div id="bookList"></div>
         <script>
             let htmlString = "<h2> Textbooks: </h2>";
-            
+    
             async function fetchData() {
-                const response = await fetch("https://cdrake1.github.io/SD330/FoxBooks/courses.json");
+                const response = await fetch("courses.json");
                 const data = await response.json();
-        
-                let books = Object.keys(data['books']);
-                for (const i in books){
-                    const book = data["books"][books[i]];
-                    htmlString += "<p>Title: " + book["title"] + "</p>";
-                    htmlString += "<p>Author: " + book["author"] + "</p>";
-                    htmlString += "<p>ISBN: " + book["ISBN"] + "</p>";
+    
+                const urlParams = new URLSearchParams(window.location.search);
+                const courseID = urlParams.get('courseID');
+    
+                const books = data.books;
+                for (const bookID in books) {
+                    const book = books[bookID];
+                    if (book.courseID === courseID) {
+                        htmlString += "<p>Title: " + book["title"] + "</p>";
+                        htmlString += "<p>Author: " + book["author"] + "</p>";
+                        htmlString += "<p>ISBN: " + book["ISBN"] + "</p>";
+                    }
                 }
-        
+    
                 document.getElementById("bookList").innerHTML = htmlString;
             }
-        
+    
             fetchData();
-        
-        
         </script>
+          
         
 
         <footer>

@@ -29,13 +29,18 @@
         <div class="classList">
             <h1> Your Classes this semester: </h1>
 
-            <ul id="courseList">
-                <li></li>
-            </ul>
 
         </div>
+
+        <h1>Course List</h1>
+        <ul>
+            <li><a href="books.html?courseID=CMPT330">System Design</a></li>
+            <li><a href="books.html?courseID=CMPT331">Theory of Programming Languages</a></li>
+            <li><a href="books.html?courseID=CMPT307">Internetworking</a></li>
+            <li><a href="books.html?courseID=CMPT412">Robotics</a></li>
+        </ul>
+
         <script>
-            let htmlString = "<h2> Your classes! <h2>";
             
             async function fetchData() {
                 const response = await fetch("https://cdrake1.github.io/SD330/FoxBooks/courses.json");
@@ -45,11 +50,6 @@
                 let CourseTwo = data['courses']['CMPT331'];
                 let CourseThree = data['courses']['CMPT307'];
                 let CourseFour = data['courses']['CMPT412'];
-
-                htmlString += "<h3><a href='books.html?courseID=" + CourseOne["courseID"] + "'>" + CourseOne["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseTwo["courseID"] + "'>" + CourseTwo["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseThree["courseID"] + "'>" + CourseThree["title"] + "</a></h3>";
-                htmlString += "<h3><a href='books.html?courseID=" + CourseFour["courseID"] + "'>" + CourseFour["title"] + "</a></h3>";
 
                 document.getElementById("courseList").innerHTML = htmlString;
             }
